@@ -1,0 +1,7 @@
+{
+  "name": "rapidash",
+  "version": "1.0.0",
+  "main": "./rapidash.min.js",
+  "description": "Fastest functional utility library created by NodeJs community",
+
+}

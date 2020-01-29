@@ -2,26 +2,39 @@
   "name": "rapidash",
   "version": "0.0.0",
   "description": "",
-  "main": "build/src/index.js",
-  "types": "build/src/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "files": [
     "build/src"
   ],
   "license": "Apache-2.0",
   "keywords": [],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "check": "gts check",
     "clean": "gts clean",
     "compile": "tsc -p .",
+    "compile:watch": "tsc -p . --watch",
     "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run check"
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
   },
   "devDependencies": {
+    "@types/benchmark": "^1.0.31",
+    "@types/jest": "^25.1.0",
+    "@types/node": "^10.0.3",
+    "@types/webpack": "^4.41.3",
+    "benchmark": "^2.1.4",
     "gts": "^1.1.2",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "ts-jest": "^25.0.0",
     "typescript": "~3.7.0",
-    "@types/node": "^10.0.3"
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "uninstall": "0.0.0"
   }
 }
