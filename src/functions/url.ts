@@ -19,38 +19,8 @@ export const solution = new SolutionBuilder<definition>('max');
  */
 
 solution
-  .test('Return max number', [[1, 2, 3]], 3)
-  .test('Return undefined for empty', [[]], undefined)
-  .test('Return undefined for no params', [], undefined)
-  .bench([
-    [
-      1,
-      2,
-      3,
-      2,
-      3,
-      7,
-      20,
-      3,
-      2,
-      5,
-      4,
-      7,
-      3,
-      45,
-      63568,
-      45,
-      3456,
-      3,
-      568,
-      456,
-      5,
-      3567,
-      3457,
-      34568,
-      3,
-    ],
-  ]);
+  .test('Return max number', [['cagatay', 'oguzhan', 'osman']], 'http://test.com/path?cagatay=true&oguzhan=true&osman=true')
+  .bench([['cagatay', 'oguzhan', 'osman']]);
 
 /**
  * Solutions

@@ -1,5 +1,8 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testPathIgnorePatterns: ["build"]
+  testPathIgnorePatterns: ["build"],
+  collectCoverageFrom: [
+    "**/src/functions/*.ts"
+  ]
 };

@@ -1,9 +1,12 @@
-import {Suite} from 'benchmark';
-import {Solution} from './solution';
+import { Suite } from 'benchmark';
+import { Solution } from './solution';
 
 interface BenchmarkReport {
   winner: string;
-  benchmarks: string[];
+  benchmarks: Array<{
+    text: string;
+    opsSec: number;
+  }>;
 }
 
 class Benchmark {
@@ -35,7 +38,10 @@ class Benchmark {
     this.suite.on('complete', () => {
       defer({
         winner: this.suite.filter('fastest').map('name' as any)[0] as string,
-        benchmarks: this.suite.map((bench: any) => bench.toString()),
+        benchmarks: this.suite.map((bench: any) => ({
+          text: bench.toString(),
+          opsSec: bench.hz,
+        })),
       });
     });
 
@@ -46,9 +52,9 @@ class Benchmark {
     return new Promise<BenchmarkReport>(resolve => {
       defer = resolve;
       console.info(`Starting benchmarks for ${this.name}`);
-      this.suite.run({async: true});
+      this.suite.run({ async: true });
     });
   }
 }
 
-export {Benchmark, BenchmarkReport};
+export { Benchmark, BenchmarkReport };
