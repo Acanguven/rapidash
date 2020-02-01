@@ -1,6 +1,0 @@
-# Functions
-
-
-## Max
- 
-Max

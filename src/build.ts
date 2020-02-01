@@ -29,6 +29,7 @@ class Builder {
 
     fs.mkdirSync(DIST_FOLDER, {recursive: true});
     fs.mkdirSync(DOCS_FOLDER, {recursive: true});
+    fs.mkdirSync(PRE_BUILD_FOLDER, {recursive: true});
 
     await Promise.all([
       Builder.copyPackage(benchmarkResults),
@@ -67,10 +68,12 @@ class Builder {
 
   static async copyPackage(benchmarkResults: BenchmarkResults) {
     const top3Contributors = Builder.getTop3Contributors(benchmarkResults);
+
     let winnersScript = fs.readFileSync(
-      path.join(__dirname, '../template/winners.js'),
+      path.join(__dirname, '../template/npm/winners.js'),
       'utf8'
     );
+
     const contributorsLog = top3Contributors.reduce(
       (contributorsLog: string, contributor, i) => {
         contributorsLog += `console.log("🏆", "${i +
@@ -81,6 +84,7 @@ class Builder {
       },
       ''
     );
+
     winnersScript = winnersScript.replace(
       `//replace_winners//`,
       contributorsLog
@@ -91,6 +95,8 @@ class Builder {
       winnersScript,
       'utf8'
     );
+
+    fs.copyFileSync(path.join(__dirname, '../template/npm/package.json'), path.join(DIST_FOLDER, './package.json'))
   }
 
   static getTop3Contributors(benchmarkResults: BenchmarkResults) {
