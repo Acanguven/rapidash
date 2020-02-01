@@ -96,7 +96,8 @@ class Builder {
       'utf8'
     );
 
-    fs.copyFileSync(path.join(__dirname, '../template/npm/package.json'), path.join(DIST_FOLDER, './package.json'))
+    fs.copyFileSync(path.join(__dirname, '../template/npm/package.json'), path.join(DIST_FOLDER, './package.json'));
+    fs.copyFileSync(path.join(__dirname, '../README.md'), path.join(DIST_FOLDER, './README.md'));
   }
 
   static getTop3Contributors(benchmarkResults: BenchmarkResults) {
