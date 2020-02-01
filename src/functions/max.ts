@@ -19,6 +19,10 @@ export const solution = new SolutionBuilder<definition>('max');
  */
 
 solution
+  .description('Computes the maximum value of array. If array is empty or falsey, undefined is returned.')
+  .example('r.max([1,2,3]) // 3')
+  .example('r.max() // undefined')
+  .example('r.max([]) // undefined')
   .test('Return max number', [[1, 2, 3]], 3)
   .test('Return undefined for empty', [[]], undefined)
   .test('Return undefined for no params', [], undefined)

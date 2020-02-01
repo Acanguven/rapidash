@@ -1,10 +1,11 @@
-import { BenchmarkResults, Registry } from './registry';
+import {BenchmarkResults, Registry} from './registry';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as webpack from 'webpack';
 
 const PRE_BUILD_FOLDER = path.join(__dirname, '../pre-build');
 const DIST_FOLDER = path.join(__dirname, '../dist');
+const DOCS_FOLDER = path.join(__dirname, '../docs');
 
 class Builder {
   static compiler = webpack({
@@ -25,10 +26,14 @@ class Builder {
 
   static async build() {
     const benchmarkResults = await this.benchmark();
-    fs.mkdirSync(DIST_FOLDER, { recursive: true });
+
+    fs.mkdirSync(DIST_FOLDER, {recursive: true});
+    fs.mkdirSync(DOCS_FOLDER, {recursive: true});
+
     await Promise.all([
       Builder.copyPackage(benchmarkResults),
       Builder.createLibraryFile(benchmarkResults),
+      Builder.createDocs(benchmarkResults)
     ]);
   }
 
@@ -69,7 +74,7 @@ class Builder {
     const contributorsLog = top3Contributors.reduce(
       (contributorsLog: string, contributor, i) => {
         contributorsLog += `console.log("🏆", "${i +
-          1}.", "https://github.com/${contributor.name}", "Solution count: ${
+        1}.", "https://github.com/${contributor.name}", "Solution count: ${
           contributor.count
         }")`;
         return contributorsLog;
@@ -106,6 +111,10 @@ class Builder {
     return Array.from(winnerList.values())
       .sort((a, b) => a.count - b.count)
       .slice(0, 3);
+  }
+
+  private static createDocs(benchmarkResults: BenchmarkResults) {
+    return undefined;
   }
 }
 

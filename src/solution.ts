@@ -31,12 +31,16 @@ class SolutionBuilder<T = any> {
 
   benchmarkInput!: unknown[];
 
+  examples: string[] = [];
+
+  descr = '';
+
   constructor(name: string) {
     this.name = name;
   }
 
   test(name: string, input: unknown[], output: unknown) {
-    this.testCases.push({ name, input, output });
+    this.testCases.push({name, input, output});
     return this;
   }
 
@@ -50,6 +54,16 @@ class SolutionBuilder<T = any> {
     this.benchmarkInput = input;
     return this;
   }
+
+  example(example: string) {
+    this.examples.push(example);
+    return this;
+  }
+
+  description(description: string) {
+    this.descr = description;
+    return this;
+  }
 }
 
-export { Solution, SolutionBuilder };
+export {Solution, SolutionBuilder};
