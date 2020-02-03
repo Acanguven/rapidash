@@ -75,6 +75,9 @@ jobs:
       - run:
           name: List Workspace
           command: ls
+      - add_ssh_keys:
+          fingerprints:
+            - $GIT_TOKEN
       - run:
           name: cd docs
           command: cd docs
