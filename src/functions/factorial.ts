@@ -16,7 +16,7 @@ solution
 
 /**
  * Solutions
- * Provide your totalSolutions below
+ * Provide your solutions below
  */
 
 solution

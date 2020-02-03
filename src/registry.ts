@@ -1,7 +1,6 @@
 import { SolutionBuilder } from './solution';
 import { Benchmark, BenchmarkReport } from './benchmark';
-import { solution as max } from './functions/max';
-import { solution as factorial } from './functions/factorial';
+import * as solutions from './functions';
 
 type BenchmarkResults = Array<{
   function: SolutionBuilder;
@@ -53,6 +52,8 @@ class Registry {
   }
 }
 
-Registry.solution('max', max).solution('factorial', factorial);
+Object.keys(solutions).forEach(key => {
+  Registry.solution(key, (solutions as any)[key]);
+});
 
 export { BenchmarkResults, Registry };
