@@ -5,9 +5,8 @@ defaults: &defaults
   docker:
     - image: circleci/node:10
 
-
 orbs:
-  gh-pages: sugarshin/gh-pages@0.0.6
+  codecov: codecov/codecov@1.0.4
 
 jobs:
   test:
@@ -23,6 +22,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run test
+      - store_artifacts:
+          path: coverage
+      - codecov/upload:
+          file: coverage/*.json
+          token: $CODECOV_TOKEN
       - run: npm run compile
 
   bench:
