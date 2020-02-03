@@ -36,8 +36,8 @@ solution
   });
 ```
 
-We have a `factorial` method that calculates factorial of a number. Currently there are only one solution submitted.
-Now we will be adding another solution. Checkout the template below.
+We have a `factorial` method that calculates the factorial of a number. Currently, there is only one solution submitted.
+Now we will be adding another solution. Check out the template below.
 
 ```js
 solution
@@ -54,7 +54,7 @@ Project is built on typescript so static type checking is enabled to provide bet
 </p>
 
 
-After we add our new solution the latest version of the file will be like below.
+After adding our new solution, the latest version of the file will be like below.
 
 ```js
 import {SolutionBuilder} from '../solution';
