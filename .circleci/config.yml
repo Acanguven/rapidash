@@ -82,8 +82,10 @@ jobs:
       - run: git config --global user.name "CirleCi"
       - run: git clone git@github.com:Acanguven/rapidash.git rapidash
       - run: cd rapidash
+      - run: ls -a
       - run: git checkout gh-pages
-      - run: mv ../docs/* ./*
+      - run: rm -r ./*
+      - run: mv ../docs/* .
       - run: git add .
       - run: git commit -m "update docs"
       - run: git push
