@@ -77,6 +77,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - 7f:7c:9d:f0:a1:14:a3:7f:c6:6b:5c:22:b2:c6:0b:3b
+      - run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       - run: git config --global user.email "ahmetcanguven44@gmail.com"
       - run: git config --global user.name "CirleCi"
       - run: git clone git@github.com:Acanguven/rapidash.git rapidash
