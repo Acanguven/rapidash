@@ -49,7 +49,7 @@ class Benchmark {
         benchmarks: this.suite.map((bench: any) => ({
           text: bench.toString(),
           opsSec: bench.hz,
-          owner: fastest.map('name' as any)[0] as string,
+          owner: bench.name,
         })),
       });
     });

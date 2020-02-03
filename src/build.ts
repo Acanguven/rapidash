@@ -94,17 +94,19 @@ class Builder {
         contributorsLog += `console.log("🏆", "${i +
           1}.", "https://github.com/${contributor.name}", "Solution count: ${
           contributor.totalSolutions
-        }", "Score: ${contributor.score}")`;
+        }", "Score: ${contributor.score}");`;
         return contributorsLog;
       },
       ''
     );
 
     winnersScript = winnersScript.replace(
-      `//replace_winners//`,
+      `{{replace_winners}}`,
       contributorsLog
     );
 
+
+    console.log(path.join(DIST_FOLDER, './winners.js'));
     fs.writeFileSync(
       path.join(DIST_FOLDER, './winners.js'),
       winnersScript,
@@ -157,7 +159,7 @@ class Builder {
     });
 
     return Array.from(contributorList.values()).sort(
-      (a, b) => a.score - b.score
+      (a, b) => b.score - a.score
     );
   }
 

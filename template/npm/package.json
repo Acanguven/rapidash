@@ -1,9 +1,14 @@
 {
   "name": "rapidash",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./rapidash.min.js",
   "description": "Fastest functional utility library created by NodeJs community",
   "scripts": {
     "postinstall": "node winners.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acanguven/rapidash.git"
+  },
+  "license": "MIT"
 }

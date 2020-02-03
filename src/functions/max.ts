@@ -67,7 +67,7 @@ solution
   });
 
 solution
-  .owner('acanguven2')
+  .owner('cagataycali')
   .method('Reduce')
   .fn(arr => {
     if (!arr || !arr.length) return;
