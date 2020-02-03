@@ -55,14 +55,11 @@ jobs:
           name: List Workspace
           command: ls
       - run:
-          name: cd dist
-          command: cd dist
-      - run:
           name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
-#      - run:
-#          name: Publish package
-#          command: npm publish
+          command: cd dist && echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+      - run:
+          name: Publish package
+          command: cd dist && npm publish
 
 
 
