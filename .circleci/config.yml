@@ -45,7 +45,6 @@ jobs:
           paths:
             - docs
             - dist
-            - .git
 
   deploy:
     <<: *defaults
@@ -75,16 +74,15 @@ jobs:
       - run:
           name: List Workspace
           command: ls
-      - run: mv -rf .git ./docs/.git
-      - run:
-          name: cd docs
-          command: cd docs
       - add_ssh_keys:
           fingerprints:
             - $GIT_TOKEN
       - run: git config --global user.email "ahmetcanguven44@gmail.com"
       - run: git config --global user.name "CirleCi"
+      - run: git clone git@github.com:Acanguven/rapidash.git rapidash
+      - run: cd rapidash
       - run: git checkout gh-pages
+      - run: mv ../docs/* ./*
       - run: git add .
       - run: git commit -m "update docs"
       - run: git push
