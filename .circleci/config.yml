@@ -45,6 +45,7 @@ jobs:
           paths:
             - docs
             - dist
+            - .git
 
   deploy:
     <<: *defaults
