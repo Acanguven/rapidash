@@ -6,6 +6,7 @@
   "scripts": {
     "postinstall": "node winners.js"
   },
+  "homepage": "https://rapidashjs.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/acanguven/rapidash.git"
