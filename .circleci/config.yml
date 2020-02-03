@@ -20,7 +20,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run test
-      - run: npm run build
+      - run: npm run compile
 
   bench:
     <<: *defaults
@@ -35,7 +35,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run test
-      - run: npm run build
+      - run: npm run compile
       - run: node build/build.js
       - persist_to_workspace:
           root: docs
