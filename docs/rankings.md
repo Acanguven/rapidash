@@ -10,4 +10,5 @@ ___
     
 | Rank | Avatar | Username  | Solutions | Score |
 |------|--------|-----------|-------|-----------|
-{{rankings}}
+| 1  |    ![acanguven](https://github.com/acanguven.png?size=60)    | [acanguven](https://github.com/acanguven) |     3     | 60   |
+

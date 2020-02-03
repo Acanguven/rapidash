@@ -1,11 +1,17 @@
 # Functions
 
+<style>
+    h2  {
+        text-transform: capitalize;
+    }
+</style>
 
-## Max
+<p class="tip">
+All examples assume that you required Rapidash
+</p>
 
-Max
+```js
+const r = require('rapidashjs');
+```
 
-
-## Min
-
-Min
+{{functionsContent}}

@@ -11,4 +11,5 @@
     * [Rankings](rankings.md)
 * [Roadmap](roadmap.md)
 * [Functions](functions.md)
-{{sideBarItems}}
+    * [max](functions.md#max)
+    * [factorial](functions.md#factorial)

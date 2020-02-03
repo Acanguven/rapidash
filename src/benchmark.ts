@@ -2,10 +2,14 @@ import { Suite } from 'benchmark';
 import { Solution } from './solution';
 
 interface BenchmarkReport {
-  winner: string;
+  winnerSolution: {
+    owner: string;
+    hz: number;
+  };
   benchmarks: Array<{
     text: string;
     opsSec: number;
+    owner: string;
   }>;
 }
 
@@ -36,11 +40,16 @@ class Benchmark {
     });
 
     this.suite.on('complete', () => {
+      const fastest =  this.suite.filter('fastest');
       defer({
-        winner: this.suite.filter('fastest').map('name' as any)[0] as string,
+        winnerSolution: {
+          owner: fastest.map('name' as any)[0] as string,
+          hz: fastest.map('hz' as any)[0] as number,
+        },
         benchmarks: this.suite.map((bench: any) => ({
           text: bench.toString(),
           opsSec: bench.hz,
+          owner: fastest.map('name' as any)[0] as string
         })),
       });
     });
