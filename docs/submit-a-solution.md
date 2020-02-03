@@ -94,6 +94,6 @@ solution
   });
 ```
 
-The open a pull request, tests will automatically run and if they pass we will merge your solution and you will get your score.
+Then open a pull request, tests will automatically run and if they pass we will merge your solution and you will get your score.
 
 Tests are located above the file: `.test('Test name', [param1, param2], expectedOutput)`. There can be multiple tests. You can run `npm run test` to run tests locally.

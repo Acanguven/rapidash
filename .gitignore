@@ -106,4 +106,5 @@ dist
 build/
 pre-build/
 dist/
-#docs/
+docs/
+!template/docs
