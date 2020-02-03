@@ -6,6 +6,9 @@ defaults: &defaults
     - image: circleci/node:10
 
 
+orbs:
+  gh-pages: sugarshin/gh-pages@0.0.6
+
 jobs:
   test:
     <<: *defaults
@@ -52,6 +55,9 @@ jobs:
           name: List Workspace
           command: ls
       - run:
+          name: cd dist
+          command: cd dist
+      - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
 #      - run:
@@ -63,13 +69,15 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: docs
+          at: .
       - run:
           name: List Workspace
           command: ls
       - run:
-          name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+          name: cd docs
+          command: cd docs
+      - gh-pages/deploy:
+          ssh-fingerprints: '$GIT_TOKEN'
 
 
 workflows:
