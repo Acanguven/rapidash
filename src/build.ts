@@ -105,7 +105,6 @@ class Builder {
       contributorsLog
     );
 
-
     console.log(path.join(DIST_FOLDER, './winners.js'));
     fs.writeFileSync(
       path.join(DIST_FOLDER, './winners.js'),
