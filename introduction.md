@@ -15,9 +15,10 @@ Follow [quick start](quick-start.md) guide!
 ## How it works?
 ___
 1. A new problem released on Rapidash.
-2. Contributors submits solutions.
-3. The new solution is tested automatically and if it valid it is added to solution list.
+2. Contributors submit solutions.
+3. The new solution is tested automatically and if it is valid it gets added to the solution list.
 3. Rapidash automatically picks the fastest solution on each build so each version shipped with the fastest solutions all the time.
+4. Other solutions are removed from the bundle to reduce bundle size automatically.
 
 <p class="tip">
 Rapidash releases new version each sunday picking the fastest solutions from list and updates <a href="#/rankings">rankings</a>.
@@ -25,7 +26,7 @@ Rapidash releases new version each sunday picking the fastest solutions from lis
 
 
 
-<a href="https://www.npmjs.com/package/rapidash" target="_blank">Current version</a> of Rapidash is: 1.0.3 with size 1.365kb *without gzip*.
+<a href="https://www.npmjs.com/package/rapidash" target="_blank">Current version</a> of Rapidash is: 1.0.4 with size 1.365kb *without gzip*.
 
 
 
