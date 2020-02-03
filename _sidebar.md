@@ -1,7 +1,15 @@
 <!-- docs/_sidebar.md -->
 
-* [Home](/home.md)
+<p align="center">
+  <img src="/logo.png" width="50%">
+</p>
+
+* [Introduction](/introduction.md)
 * [Quick Start](/quick-start.md)
+* [Contribution](contribution.md)
+    * [Submit A Solution](submit-a-solution.md)
+    * [Rankings](rankings.md)
+* [Roadmap](roadmap.md)
 * [Functions](functions.md)
     * [max](functions.md#max)
-* [Contributors](contributors.md)
+    * [factorial](functions.md#factorial)

@@ -1,0 +1,14 @@
+# Rankings
+
+<p class="tip">
+<a href="#/submit-a-solution">Submitting a solution</a> is really easy, join this list!
+</p> 
+
+___
+**These are the great people that make Rapidash great.**  
+
+    
+| Rank | Avatar | Username  | Solutions | Score |
+|------|--------|-----------|-------|-----------|
+| 1  |    ![acanguven](https://github.com/acanguven.png?size=60)    | [acanguven](https://github.com/acanguven) |     3     | 60   |
+
