@@ -272,7 +272,7 @@ class Builder {
             solutionOwner.score
           }   |\r\n`
       )
-      .join();
+      .join('');
 
     fs.writeFileSync(
       path.join(DOCS_FOLDER, './rankings.md'),
