@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/logo.png">
+  <img src="https://github.com/Acanguven/rapidash/raw/master/logo.png">
 </p>
 
 # Rapidash
