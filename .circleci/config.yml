@@ -38,19 +38,16 @@ jobs:
       - run: npm run compile
       - run: node build/build.js
       - persist_to_workspace:
-          root: docs
+          root: .
           paths:
             - docs
-      - persist_to_workspace:
-          root: dist
-          paths:
             - dist
 
   deploy:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: dist
+          at: .
       - run:
           name: List Workspace
           command: ls
