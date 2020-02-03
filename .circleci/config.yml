@@ -1,0 +1,106 @@
+version: 2.1
+
+
+defaults: &defaults
+  docker:
+    - image: circleci/node:10
+
+
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+      - run: npm i
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run test
+      - run: npm run build
+
+  bench:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+      - run: npm i
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run test
+      - run: npm run build
+      - run: node build/build.js
+      - persist_to_workspace:
+          root: docs
+          paths:
+            - docs
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - dist
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: dist
+      - run:
+          name: List Workspace
+          command: ls
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+#      - run:
+#          name: Publish package
+#          command: npm publish
+
+  pages:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: docs
+      - run:
+          name: List Workspace
+          command: ls
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - test:
+          filters:
+            tags:
+              only: /^v.*/
+      - bench:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
+      - hold:
+          type: approval
+          requires:
+            - bench
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - hold
+          filters:
+            branches:
+              only: master
+      - pages:
+          requires:
+            - deploy
