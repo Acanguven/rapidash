@@ -10,6 +10,6 @@ ___
     
 | Rank | Avatar | Username  | Solutions | Score |
 |------|--------|-----------|-------|-----------|
-| 1  |    ![acanguven](https://github.com/acanguven.png?size=60)    | [acanguven](https://github.com/acanguven) |     3     | 60   |
+| 1  |    ![acanguven](https://github.com/acanguven.png?size=60)    | [acanguven](https://github.com/acanguven) |     4     | 70   |
 | 2  |    ![cagataycali](https://github.com/cagataycali.png?size=60)    | [cagataycali](https://github.com/cagataycali) |     1     | 10   |
 
