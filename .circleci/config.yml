@@ -75,12 +75,13 @@ jobs:
       - run:
           name: List Workspace
           command: ls
-      - add_ssh_keys:
-          fingerprints:
-            - $GIT_TOKEN
+      - run: mv -rf .git ./docs/.git
       - run:
           name: cd docs
           command: cd docs
+      - add_ssh_keys:
+          fingerprints:
+            - $GIT_TOKEN
       - run: git config --global user.email "ahmetcanguven44@gmail.com"
       - run: git config --global user.name "CirleCi"
       - run: git checkout gh-pages
