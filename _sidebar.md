@@ -13,3 +13,4 @@
 * [Functions](functions.md)
     * [max](functions.md#max)
     * [factorial](functions.md#factorial)
+    * [average](functions.md#average)
