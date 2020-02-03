@@ -80,7 +80,7 @@ jobs:
       - run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       - run: git config --global user.email "ahmetcanguven44@gmail.com"
       - run: git config --global user.name "CirleCi"
-      - run: git clone git@github.com:Acanguven/rapidash.git rapidash
+      - run: git clone git@github.com:Acanguven/rapidash.git
       - run: cd rapidash
       - run: ls -a
       - run: git checkout gh-pages
