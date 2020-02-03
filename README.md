@@ -8,11 +8,9 @@
 Follow [Documentation](https://rapidashjs.com) for more information about Rapidash!
 
 ## What is Rapidash?
-___
 Rapidash is a Javascript utility library designed for performance, modularity, and reliability. Unlike other utility libraries, Rapidash designed from the ground up to be fast all the time against all Javascript engine versions. Also being open-source friendly, it is evolving faster than any other utility library.
 
 ## How it works?
-___
 1. A new problem released on Rapidash.
 2. Contributors submits solutions.
 3. The new solution is tested automatically and if it valid it is added to solution list.
