@@ -15,3 +15,4 @@ Rapidash is a Javascript utility library designed for performance, modularity, a
 2. Contributors submit solutions.
 3. The new solution is tested automatically and if it is valid it gets added to the solution list.
 3. Rapidash automatically picks the fastest solution on each build so each version shipped with the fastest solutions all the time.
+4. Other solutions are removed from the bundle to reduce bundle size automatically.
