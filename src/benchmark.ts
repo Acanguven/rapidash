@@ -40,7 +40,7 @@ class Benchmark {
     });
 
     this.suite.on('complete', () => {
-      const fastest =  this.suite.filter('fastest');
+      const fastest = this.suite.filter('fastest');
       defer({
         winnerSolution: {
           owner: fastest.map('name' as any)[0] as string,
@@ -49,7 +49,7 @@ class Benchmark {
         benchmarks: this.suite.map((bench: any) => ({
           text: bench.toString(),
           opsSec: bench.hz,
-          owner: fastest.map('name' as any)[0] as string
+          owner: fastest.map('name' as any)[0] as string,
         })),
       });
     });

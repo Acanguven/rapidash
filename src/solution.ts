@@ -40,7 +40,7 @@ class SolutionBuilder<T = any> {
   }
 
   test(name: string, input: unknown[], output: unknown) {
-    this.testCases.push({name, input, output});
+    this.testCases.push({ name, input, output });
     return this;
   }
 
@@ -66,4 +66,4 @@ class SolutionBuilder<T = any> {
   }
 }
 
-export {Solution, SolutionBuilder};
+export { Solution, SolutionBuilder };

@@ -1,4 +1,4 @@
-import {SolutionBuilder} from '../solution';
+import { SolutionBuilder } from '../solution';
 
 export type definition = (num: number) => number;
 
@@ -23,5 +23,5 @@ solution
   .owner('acanguven')
   .method('Recursive')
   .fn(function factorial(n): number {
-    return n <= 1 ? 1 : factorial(n - 1) * n
+    return n <= 1 ? 1 : factorial(n - 1) * n;
   });
