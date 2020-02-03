@@ -76,7 +76,7 @@ jobs:
           command: ls
       - add_ssh_keys:
           fingerprints:
-            - $GIT_TOKEN
+            - 7f:7c:9d:f0:a1:14:a3:7f:c6:6b:5c:22:b2:c6:0b:3b
       - run: git config --global user.email "ahmetcanguven44@gmail.com"
       - run: git config --global user.name "CirleCi"
       - run: git clone git@github.com:Acanguven/rapidash.git rapidash
