@@ -78,6 +78,8 @@ jobs:
       - run:
           name: cd docs
           command: cd docs
+      - run: git config --global user.email "ahmetcanguven44@gmail.com"
+      - run: git config --global user.name "CirleCi"
       - run: git checkout gh-pages
       - run: git add .
       - run: git commit -m "update docs"
