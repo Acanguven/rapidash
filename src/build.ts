@@ -1,8 +1,8 @@
-import {BenchmarkResults, Registry} from './registry';
+import { BenchmarkResults, Registry } from './registry';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as webpack from 'webpack';
-import {execSync} from 'child_process';
+import { execSync } from 'child_process';
 
 const PRE_BUILD_FOLDER = path.join(__dirname, '../pre-build');
 const DIST_FOLDER = path.join(__dirname, '../dist');
@@ -31,9 +31,9 @@ class Builder {
   static async build() {
     const benchmarkResults = await this.benchmark();
 
-    fs.mkdirSync(DIST_FOLDER, {recursive: true});
-    fs.mkdirSync(DOCS_FOLDER, {recursive: true});
-    fs.mkdirSync(PRE_BUILD_FOLDER, {recursive: true});
+    fs.mkdirSync(DIST_FOLDER, { recursive: true });
+    fs.mkdirSync(DOCS_FOLDER, { recursive: true });
+    fs.mkdirSync(PRE_BUILD_FOLDER, { recursive: true });
 
     await Promise.all([
       Builder.copyPackage(benchmarkResults),
@@ -75,7 +75,7 @@ class Builder {
 
         resolve();
       });
-    })
+    });
   }
 
   static async copyPackage(benchmarkResults: BenchmarkResults) {
@@ -92,7 +92,7 @@ class Builder {
     const contributorsLog = top3Contributors.reduce(
       (contributorsLog: string, contributor, i) => {
         contributorsLog += `console.log("🏆", "${i +
-        1}.", "https://github.com/${contributor.name}", "Solution count: ${
+          1}.", "https://github.com/${contributor.name}", "Solution count: ${
           contributor.totalSolutions
         }", "Score: ${contributor.score}")`;
         return contributorsLog;
@@ -122,12 +122,14 @@ class Builder {
   }
 
   static getTopContributors(benchmarkResults: BenchmarkResults) {
-    const contributorList: Map<string,
+    const contributorList: Map<
+      string,
       {
         name: string;
         totalSolutions: number;
         score: number;
-      }> = new Map();
+      }
+    > = new Map();
     benchmarkResults.forEach(result => {
       const benchSorted = result.benchmarkResults.benchmarks.sort(
         (a, b) => b.opsSec - a.opsSec
