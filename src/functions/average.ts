@@ -10,10 +10,10 @@ export const solution = new SolutionBuilder<definition>('average');
 
 solution
   .description('Returns the average of two or more numbers.')
-  .example('r.max() // NaN')
-  .example('r.max(1) // 1')
-  .example('r.max(1,2) // 1.5')
-  .example('r.max(1,2,3) // 2')
+  .example('r.average() // NaN')
+  .example('r.average(1) // 1')
+  .example('r.average(1,2) // 1.5')
+  .example('r.average(1,2,3) // 2')
   .test('Return nan when no parameter', [], NaN)
   .test('Return same when single parameter', [55], 55)
   .test('Return average', [1, 2, 3], 2)
