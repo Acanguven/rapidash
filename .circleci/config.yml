@@ -81,14 +81,12 @@ jobs:
       - run: git config --global user.email "ahmetcanguven44@gmail.com"
       - run: git config --global user.name "CirleCi"
       - run: git clone git@github.com:Acanguven/rapidash.git
-      - run: cd /home/circleci/project/rapidash
-      - run: ls -a
-      - run: git checkout gh-pages
-      - run: rm -r ./*
-      - run: mv ../docs/* .
-      - run: git add .
-      - run: git commit -m "update docs"
-      - run: git push
+      - run: cd /home/circleci/project/rapidash && git checkout gh-pages
+      - run: cd /home/circleci/project/rapidash && rm -r ./*
+      - run: cd /home/circleci/project/rapidash && mv ../docs/* .
+      - run: cd /home/circleci/project/rapidash && git add .
+      - run: cd /home/circleci/project/rapidash && git commit -m "update docs"
+      - run: cd /home/circleci/project/rapidash && git push
 
 
 workflows:
