@@ -34,7 +34,7 @@ r.max([]) // undefined
 
 > max function by <a href="https://github.com/acanguven">acanguven</a>  
 
-max can perform 67,705,486 ops/sec with benchmark data below.
+max can perform 63,530,533 ops/sec with benchmark data below.
 
 ```js
 r.max(1,2,3,4,5,6,1,3,5,7,2,8,9,32,4,8,4,4,5,7,56,1,5,8,4,4,6);
@@ -55,7 +55,7 @@ r.factorial(6) // 720
 
 > factorial function by <a href="https://github.com/acanguven">acanguven</a>  
 
-factorial can perform 9,558,343 ops/sec with benchmark data below.
+factorial can perform 9,191,823 ops/sec with benchmark data below.
 
 ```js
 r.factorial(14);
@@ -88,10 +88,10 @@ r.average(1,2,3,0) // 1.5
 
 > average function by <a href="https://github.com/acanguven">acanguven</a>  
 
-average can perform 44,323,527 ops/sec with benchmark data below.
+average can perform 44,405,692 ops/sec with benchmark data below.
 
 ```js
-r.average(1230735323542374342);
+r.average(1,2,3,0,73,53,23,54,23,74,3,42);
 ```
 
 
