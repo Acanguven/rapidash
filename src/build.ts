@@ -213,7 +213,10 @@ class Builder {
         '{{hz}}': Math.round(
           fn.benchmarkResults.winnerSolution.hz
         ).toLocaleString(),
-        '{{benchData}}': fn.function.benchmarkInput.join(','),
+        '{{benchData}}': JSON.stringify(fn.function.benchmarkInput).slice(
+          1,
+          -1
+        ),
       };
 
       let functionMarkdownContent = functionTemplate;
