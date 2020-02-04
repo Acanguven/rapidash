@@ -29,6 +29,7 @@ const r = require('rapidash');
 console.log(r.max([1,2,3])); // 3
 ```
 
+Check out [functions](https://rapidashjs.com/#/functions) for all features.
 
 
 ## How it works?
