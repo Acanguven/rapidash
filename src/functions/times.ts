@@ -18,8 +18,17 @@ solution
   .example('r.times(2, 2) // [2, 2]')
   .test('Return filled null twice', [2, null], [null, null])
   .test('Return filled undefined twice', [2], [undefined, undefined])
+  .test(
+    'Return filled object twice',
+    [2, { test: 'object' }],
+    [{ test: 'object' }, { test: 'object' }]
+  )
   .test('Return filled 2 twice', [2, 2], [2, 2])
-  .bench([[2, 2]]);
+  .bench([
+    [2, 2],
+    [100, { hello: 'world' }],
+    [1000, { hello: 'world', nested: { object: { with: { array: [] } } } }],
+  ]);
 
 /**
  * Solutions
