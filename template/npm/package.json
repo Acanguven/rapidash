@@ -6,6 +6,11 @@
   "scripts": {
     "postinstall": "node winners.js"
   },
+  "keywords": [
+    "javascript",
+    "utility",
+    "library"
+  ],
   "homepage": "https://rapidashjs.com",
   "repository": {
     "type": "git",

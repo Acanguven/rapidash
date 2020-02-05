@@ -7,10 +7,15 @@
   "files": [
     "build/src"
   ],
-  "license": "Apache-2.0",
-  "keywords": [],
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "utility",
+    "library"
+  ],
   "scripts": {
-    "test": "jest --coverage",
+    "solution": "TS_NODE_FILES=true node -r ts-node/register ./src/solution-cli.ts",
+    "test:ci": "jest --coverage",
     "check": "gts check",
     "clean": "gts clean",
     "compile": "tsc -p .",
@@ -30,8 +35,12 @@
     "jest": "^25.1.0",
     "jest-cli": "^25.1.0",
     "ts-jest": "^25.0.0",
+    "ts-node": "^8.6.2",
     "typescript": "~3.7.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0"
   }
 }
