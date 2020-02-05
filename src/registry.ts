@@ -1,5 +1,5 @@
-import {SolutionBuilder} from './solution';
-import {Benchmark, BenchmarkReport} from './benchmark';
+import { SolutionBuilder } from './solution';
+import { Benchmark, BenchmarkReport } from './benchmark';
 import * as solutions from './functions';
 
 type BenchmarkResults = Array<{
@@ -65,4 +65,4 @@ Object.keys(solutions).forEach(key => {
   Registry.solution(key, (solutions as any)[key]);
 });
 
-export {BenchmarkResults, Registry};
+export { BenchmarkResults, Registry };
