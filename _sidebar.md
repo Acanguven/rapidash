@@ -15,3 +15,4 @@
     * [factorial](functions.md#factorial)
     * [average](functions.md#average)
     * [primes](functions.md#primes)
+    * [times](functions.md#times)

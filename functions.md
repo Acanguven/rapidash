@@ -34,7 +34,7 @@ r.max([]) // undefined
 
 > max function by <a href="https://github.com/acanguven">acanguven</a>  
 
-max can perform 66,686,826 ops/sec with benchmark data below.
+max can perform 59,981,298 ops/sec with benchmark data below.
 
 ```js
 r.max([1,2,3,4,5,6,1,3,5,7,2,8,9,32,4,8,4,4,5,7,56,1,5,8,4,4,6]);
@@ -55,7 +55,7 @@ r.factorial(6) // 720
 
 > factorial function by <a href="https://github.com/acanguven">acanguven</a>  
 
-factorial can perform 9,637,711 ops/sec with benchmark data below.
+factorial can perform 9,285,412 ops/sec with benchmark data below.
 
 ```js
 r.factorial(14);
@@ -88,7 +88,7 @@ r.average(1,2,3,0) // 1.5
 
 > average function by <a href="https://github.com/acanguven">acanguven</a>  
 
-average can perform 46,498,051 ops/sec with benchmark data below.
+average can perform 45,003,262 ops/sec with benchmark data below.
 
 ```js
 r.average(1,2,3,0,73,53,23,54,23,74,3,42);
@@ -109,10 +109,40 @@ r.primes(10) // [2,3,5,7]
 
 > primes function by <a href="https://github.com/acanguven">acanguven</a>  
 
-primes can perform 31,851 ops/sec with benchmark data below.
+primes can perform 29,661 ops/sec with benchmark data below.
 
 ```js
 r.primes(150);
+```
+
+
+___
+## times
+
+times receives as arguments the number of iterations and a function to execute n times and returns an array of the results. Very useful when creating dynamic test data.
+
+### Examples
+```js
+r.times(2, null) // [null, null]
+```
+ ```js
+r.times() // []
+```
+ ```js
+r.times(2) // [undefined, undefined]
+```
+ ```js
+r.times(2, 2) // [2, 2]
+```
+
+
+
+> times function by <a href="https://github.com/cagataycali">cagataycali</a>  
+
+times can perform 34,766,281 ops/sec with benchmark data below.
+
+```js
+r.times([2,2],[100,{"hello":"world"}],[1000,{"hello":"world","nested":{"object":{"with":{"array":[]}}}}]);
 ```
 
 
