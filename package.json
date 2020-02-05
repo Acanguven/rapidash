@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "solution": "TS_NODE_FILES=true node -r ts-node/register ./src/solution-cli.ts",
-    "test:ci": "jest --coverage",
+    "test": "jest --coverage",
     "check": "gts check",
     "clean": "gts clean",
     "compile": "tsc -p .",

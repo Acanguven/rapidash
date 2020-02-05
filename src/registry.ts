@@ -7,7 +7,8 @@ type BenchmarkResults = Array<{
   benchmarkResults: BenchmarkReport;
 }>;
 
-const solutionArg = process.argv[2];
+const solutionArg =
+  process.argv[2] === '--coverage' ? undefined : process.argv[2];
 const ownerArg = process.argv[3];
 
 class Registry {
