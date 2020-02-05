@@ -26,8 +26,11 @@ solution
   .test('Return filled 2 twice', [2, 2], [2, 2])
   .bench([2, 2])
   .bench([100, { hello: 'world' }])
-  .bench([1000, { hello: 'world', nested: { object: { with: { array: [] } } } }])
-  
+  .bench([
+    1000,
+    { hello: 'world', nested: { object: { with: { array: [] } } } },
+  ]);
+
 /**
  * Solutions
  * Provide your solutions below
