@@ -4,5 +4,6 @@ import { solution as fibonacci } from './fibonacci';
 import { solution as average } from './average';
 import { solution as primes } from './primes';
 import { solution as times } from './times';
+import { solution as equal } from './equal';
 
-export { max, factorial, fibonacci, average, primes, times };
+export { max, factorial, fibonacci, average, primes, times, equal };
