@@ -25,3 +25,10 @@ solution
   .fn(function factorial(n): number {
     return n <= 1 ? 1 : factorial(n - 1) * n;
   });
+
+solution
+  .owner('BatuAksoy')
+  .method('Tail Recursive')
+  .fn(function factorial(n, accumulator = 1): number {
+    return n <= 1 ? accumulator : factorial(n - 1, n * accumulator);
+  });
