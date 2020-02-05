@@ -34,7 +34,7 @@ r.max([]) // undefined
 
 > max function by <a href="https://github.com/acanguven">acanguven</a>  
 
-max can perform 57,908,522 ops/sec with benchmark data below.
+max can perform 66,499,458 ops/sec with benchmark data below.
 
 ```js
 r.max([1,2,3,4,5,6,1,3,5,7,2,8,9,32,4,8,4,4,5,7,56,1,5,8,4,4,6]);
@@ -55,7 +55,7 @@ r.factorial(6) // 720
 
 > factorial function by <a href="https://github.com/acanguven">acanguven</a>  
 
-factorial can perform 9,731,467 ops/sec with benchmark data below.
+factorial can perform 9,221,856 ops/sec with benchmark data below.
 
 ```js
 r.factorial(14);
@@ -82,7 +82,7 @@ r.fibonacci(20) // 6765
 
 > fibonacci function by <a href="https://github.com/yavuzkoca">yavuzkoca</a>  
 
-fibonacci can perform 68,013,403 ops/sec with benchmark data below.
+fibonacci can perform 65,971,383 ops/sec with benchmark data below.
 
 ```js
 r.fibonacci(14);
@@ -115,7 +115,7 @@ r.average(1,2,3,0) // 1.5
 
 > average function by <a href="https://github.com/acanguven">acanguven</a>  
 
-average can perform 45,910,046 ops/sec with benchmark data below.
+average can perform 43,455,742 ops/sec with benchmark data below.
 
 ```js
 r.average(1,2,3,0,73,53,23,54,23,74,3,42);
@@ -136,7 +136,7 @@ r.primes(10) // [2,3,5,7]
 
 > primes function by <a href="https://github.com/acanguven">acanguven</a>  
 
-primes can perform 30,602 ops/sec with benchmark data below.
+primes can perform 30,819 ops/sec with benchmark data below.
 
 ```js
 r.primes(150);
@@ -166,7 +166,7 @@ r.times(2, 2) // [2, 2]
 
 > times function by <a href="https://github.com/cagataycali">cagataycali</a>  
 
-times can perform 29,110,206 ops/sec with benchmark data below.
+times can perform 28,892,080 ops/sec with benchmark data below.
 
 ```js
 r.times([2,2],[100,{"hello":"world"}],[1000,{"hello":"world","nested":{"object":{"with":{"array":[]}}}}]);
