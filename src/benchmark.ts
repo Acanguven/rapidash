@@ -55,12 +55,12 @@ class Benchmark {
     });
 
     this.suite.on('cycle', (event: any) => {
-      console.info(event.target.toString());
+      console.info('⚡', event.target.toString());
     });
 
     return new Promise<BenchmarkReport>(resolve => {
       defer = resolve;
-      console.info(`Starting benchmarks for ${this.name}`);
+      console.info('🏎️', `Starting benchmarks for ${this.name}`);
       this.suite.run({ async: true });
     });
   }
