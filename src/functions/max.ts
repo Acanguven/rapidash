@@ -74,3 +74,19 @@ solution
 
     return arr.reduce((max, val) => (val > max ? val : max), arr[0]);
   });
+
+solution
+  .owner('yavuzkoca')
+  .method('Linear')
+  .fn(arr => {
+    if (!arr) return;
+    const len = arr.length;
+    if (!len) return;
+    let max = arr[0];
+
+    for (let i = 1; i < len; ++i) {
+      if (arr[i] > max) max = arr[i];
+    }
+
+    return max;
+  });
