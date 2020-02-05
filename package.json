@@ -1,15 +1,20 @@
 {
   "name": "rapidash",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.9",
+  "description": "Fastest functional utility library created by NodeJs community",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
     "build/src"
   ],
-  "license": "Apache-2.0",
-  "keywords": [],
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "utility",
+    "library"
+  ],
   "scripts": {
+    "solution": "TS_NODE_FILES=true node -r ts-node/register ./src/solution-cli.ts",
     "test": "jest --coverage",
     "check": "gts check",
     "clean": "gts clean",
@@ -30,8 +35,10 @@
     "jest": "^25.1.0",
     "jest-cli": "^25.1.0",
     "ts-jest": "^25.0.0",
+    "ts-node": "^8.6.2",
     "typescript": "~3.7.0",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "chalk": "^3.0.0"
   }
 }

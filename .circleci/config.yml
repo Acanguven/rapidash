@@ -24,10 +24,10 @@ jobs:
       - run: npm run test
       - store_artifacts:
           path: coverage
+      - run: npm run compile
       - codecov/upload:
           file: coverage/*.json
           token: $CODECOV_TOKEN
-      - run: npm run compile
 
   bench:
     <<: *defaults

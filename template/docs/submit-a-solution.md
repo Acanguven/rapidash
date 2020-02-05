@@ -97,3 +97,14 @@ solution
 Then open a pull request, tests will automatically run and if they pass we will merge your solution and you will get your score.
 
 Tests are located above the file: `.test('Test name', [param1, param2], expectedOutput)`. There can be multiple tests. You can run `npm run test` to run tests locally.
+
+## Running Benchmarks & Tests
+
+You can run tests and benchmarks on your computer too. It is useful for develop - benchmark cycle.
+
+* Example Usage
+```bash
+npm run solution max acanguven
+```
+
+Rapidash runs tests for acanguven's max solution then starts benchmarking it comparing to other solutions. The owner's name is optional for tests targeting other solutions.
