@@ -4,6 +4,8 @@ export type definition = (a: any, b: any) => boolean;
 
 export const solution = new SolutionBuilder<definition>('equal');
 
+// Original repository: https://github.com/epoberezkin/fast-deep-equal
+// Modified & bugs fixed by @cagataycali
 function equal(a: any, b: any): boolean {
   if (a === b) return true;
 
