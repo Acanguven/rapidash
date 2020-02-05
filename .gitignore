@@ -112,3 +112,5 @@ docs/
 
 
 .idea
+yarn.lock
+
