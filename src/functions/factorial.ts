@@ -12,6 +12,7 @@ solution
   .description('Calculates the factorial of a number.')
   .example('r.factorial(6) // 720')
   .test('Return factorial', [6], 720)
+  .test('Return 1 for input 0', [0], 1)
   .bench([14]);
 
 /**
