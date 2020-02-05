@@ -13,6 +13,7 @@
 * [Functions](functions.md)
     * [max](functions.md#max)
     * [factorial](functions.md#factorial)
+    * [fibonacci](functions.md#fibonacci)
     * [average](functions.md#average)
     * [primes](functions.md#primes)
     * [times](functions.md#times)
