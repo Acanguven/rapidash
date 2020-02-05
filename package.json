@@ -1,7 +1,7 @@
 {
   "name": "rapidash",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.9",
+  "description": "Fastest functional utility library created by NodeJs community",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
