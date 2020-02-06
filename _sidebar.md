@@ -15,5 +15,6 @@
     * [factorial](functions.md#factorial)
     * [fibonacci](functions.md#fibonacci)
     * [average](functions.md#average)
+    * [isPalindrome](functions.md#isPalindrome)
     * [primes](functions.md#primes)
     * [times](functions.md#times)
