@@ -18,3 +18,6 @@
     * [isPalindrome](functions.md#isPalindrome)
     * [primes](functions.md#primes)
     * [times](functions.md#times)
+    * [equal](functions.md#equal)
+    * [isString](functions.md#isString)
+    * [flatten](functions.md#flatten)
