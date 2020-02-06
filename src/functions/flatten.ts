@@ -2,7 +2,7 @@ import { SolutionBuilder } from '../solution';
 
 export type definition = <T>(array: T[], depth?: number) => T[];
 
-export const solution = new SolutionBuilder<definition>('fibonacci');
+export const solution = new SolutionBuilder<definition>('flatten');
 
 solution
   .description('Flattens given array according to given depth.')
