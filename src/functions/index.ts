@@ -7,4 +7,13 @@ import { solution as primes } from './primes';
 import { solution as times } from './times';
 import { solution as flatten } from './flatten';
 
-export { max, factorial, fibonacci, average, isPalindrome, primes, times, flatten };
+export {
+  max,
+  factorial,
+  fibonacci,
+  average,
+  isPalindrome,
+  primes,
+  times,
+  flatten,
+};

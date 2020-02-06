@@ -8,14 +8,20 @@ solution
   .description('Flattens given array according to given depth.')
   .example('r.flatten([2, 3, [4, [6]]], 1) // [2, 3, 4, [6]]')
   .example('r.flatten([2, 3, [4, [6]]], 2) // [2, 3, 4, 6]')
-  .test('Return same', [[1, 2], 1], [1, 2])
+  .test('Return empty array', [null], [])
+  .test('Return same array', [[1, 2], 1], [1, 2])
   .test('Return flattened array for depth 1', [[1, [3]], 1], [1, 3])
+  .test(
+    'Return flattened array for depth 2',
+    [[1, [3, [4, 5]]], 2],
+    [1, 3, 4, 5]
+  )
   .bench([[1, 2, [2, 3, 4, [3, 4, [5]]]], 1]);
 
 const isFlattenable = (value: any) => {
-  return Array.isArray(value) || !!(value && value[Symbol.isConcatSpreadable])
-}
-const base = (array: any, depth: number, result: any[] = []): any => {
+  return Array.isArray(value) || !!(value && value[Symbol.isConcatSpreadable]);
+};
+const base = (array: any, depth: number, result: any[]): any => {
   if (array === null || array === undefined) {
     return result;
   }
@@ -34,13 +40,11 @@ const base = (array: any, depth: number, result: any[] = []): any => {
   }
 
   return result;
-}
+};
 const flatten = <T>(array: T[], depth = 1): T[] => {
   return base(array, depth, []);
-}
+};
 solution
   .owner('mehmetsefabalik')
   .method('Flatten')
   .fn(flatten);
-
-
