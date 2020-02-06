@@ -186,6 +186,7 @@ solution
       if (length !== Object.keys(b).length) return false;
 
       for (i = length; i-- !== 0; ) {
+        /* istanbul ignore next */
         if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
       }
 

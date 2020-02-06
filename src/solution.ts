@@ -29,7 +29,7 @@ class SolutionBuilder<T = any> {
 
   name: string;
 
-  benchmarkInput!: unknown[];
+  benchmarkInput: unknown[][] = [];
 
   examples: string[] = [];
 
@@ -51,7 +51,7 @@ class SolutionBuilder<T = any> {
   }
 
   bench(input: unknown[]) {
-    this.benchmarkInput = input;
+    this.benchmarkInput.push(input);
     return this;
   }
 
