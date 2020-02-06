@@ -16,6 +16,7 @@ solution
   .example('r.max() // undefined')
   .example('r.max([]) // undefined')
   .test('Return max number', [[1, 2, 3]], 3)
+  .test('Return max number', [[3, 1, 6, 3, 7]], 7)
   .test('Return undefined for empty', [[]], undefined)
   .test('Return undefined for no params', [], undefined)
   .bench([
@@ -73,4 +74,20 @@ solution
     if (!arr || !arr.length) return;
 
     return arr.reduce((max, val) => (val > max ? val : max), arr[0]);
+  });
+
+solution
+  .owner('yavuzkoca')
+  .method('Linear')
+  .fn(arr => {
+    if (!arr) return;
+    const len = arr.length;
+    if (!len) return;
+    let max = arr[0];
+
+    for (let i = 1; i < len; ++i) {
+      if (arr[i] > max) max = arr[i];
+    }
+
+    return max;
   });
