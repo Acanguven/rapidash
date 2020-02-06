@@ -32,11 +32,7 @@ solution
     [`${'a'.repeat(1000)}ab${'a'.repeat(1000)}`],
     false
   )
-  .test(
-    'Return true when input is palindrome',
-    [`${'a'.repeat(1000)}`],
-    true
-  )
+  .test('Return true when input is palindrome', [`${'a'.repeat(1000)}`], true)
   .bench([`${'a'.repeat(10)}b${'a'.repeat(9)}`])
   .bench(['a'.repeat(1000)])
   .bench([`${'a'.repeat(1000)}ab${'a'.repeat(1000)}`])
