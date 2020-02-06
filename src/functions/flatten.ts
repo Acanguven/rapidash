@@ -20,6 +20,9 @@ solution
 solution
   .owner('mehmetsefabalik')
   .method('Flatten')
+  // tsc complaint about 'implicitly any type' for depth param when I removed the number type,
+  // so I should disable this rule for next line
+  // tslint:disable-next-line: no-inferrable-types
   .fn(<T>(array: T[], depth: number = 1): T[] => {
     const isFlattenable = (value: any) => {
       return Array.isArray(value) || !!(value && value[Symbol.isConcatSpreadable]);
