@@ -13,7 +13,9 @@ solution
   .example('r.factorial(6) // 720')
   .test('Return factorial', [6], 720)
   .test('Return 1 for input 0', [0], 1)
-  .bench([14]);
+  .bench([14])
+  .bench([3])
+  .bench([60]);
 
 /**
  * Solutions
