@@ -47,3 +47,15 @@ solution
 
     return b;
   });
+
+solution
+  .owner('eylmz')
+  .method('Reverse For Loop')
+  .fn(function factorial(n): number {
+    let b = 1;
+    for (let i = n; i >= 2; i--) {
+      b *= i;
+    }
+
+    return b;
+  });
