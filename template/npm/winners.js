@@ -8,3 +8,5 @@ console.log('');
 console.log('');
 console.log('📈', 'Top 3 Solution Providers');
 {{replace_winners}}
+console.log('');
+console.log('');
