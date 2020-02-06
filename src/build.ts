@@ -201,8 +201,6 @@ class Builder {
     );
 
     const functionList = benchmarkResults.reduce((markdownContent, fn) => {
-      console.log(fn.benchmarkResults);
-
       const solutionDetails: Record<string, string> = {
         '{{solutionOwner}}': fn.benchmarkResults.winnerSolution.owner,
         '{{functionDescription}}': fn.function.descr,
