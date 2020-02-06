@@ -20,7 +20,7 @@ solution
 solution
   .owner('mehmetsefabalik')
   .method('Flatten')
-  .fn(<T>(array: T[], depth = 1): T[] => {
+  .fn(<T>(array: T[], depth: number = 1): T[] => {
     const isFlattenable = (value: any) => {
       return Array.isArray(value) || !!(value && value[Symbol.isConcatSpreadable]);
     };
