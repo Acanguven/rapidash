@@ -7,6 +7,9 @@ import { solution as primes } from './primes';
 import { solution as times } from './times';
 import { solution as equal } from './equal';
 import { solution as isString } from './is-string';
+import { solution as isObject } from './is-object';
+import { solution as isArray } from './is-array';
+import { solution as isNumber } from './is-number';
 import { solution as flatten } from './flatten';
 
 export {
@@ -19,5 +22,8 @@ export {
   times,
   equal,
   isString,
+  isObject,
+  isArray,
+  isNumber,
   flatten,
 };
