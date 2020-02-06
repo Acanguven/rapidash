@@ -79,6 +79,9 @@ class Benchmark {
 
       console.log(table.toString());
       console.log('🏆', `Fastest solution owner: ${benchAverages[0].name} with average ops/sec ${benchAverages[0].text}`);
+      console.log('');
+      console.log('');
+      console.log('');
 
       defer({
         winnerSolution: {
