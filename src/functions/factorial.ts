@@ -25,3 +25,15 @@ solution
   .fn(function factorial(n): number {
     return n <= 1 ? 1 : factorial(n - 1) * n;
   });
+
+solution
+  .owner('yavuzkoca')
+  .method('For Loop')
+  .fn(function factorial(n): number {
+    let b = 1;
+    for (let i = 2; i <= n; i++) {
+      b *= i;
+    }
+
+    return b;
+  });
