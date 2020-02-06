@@ -22,8 +22,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run test
-      - store_artifacts:
-          path: coverage
       - run: npm run compile
       - codecov/upload:
           file: coverage/*.json
@@ -86,7 +84,7 @@ jobs:
       - run: cd /home/circleci/project/rapidash && rm -r ./*
       - run: cd /home/circleci/project/rapidash && mv ../docs/* .
       - run: cd /home/circleci/project/rapidash && git add .
-      - run: cd /home/circleci/project/rapidash && git commit -m "update docs"
+      - run: cd /home/circleci/project/rapidash && git commit -m "[ci skip] Update Docs"
       - run: cd /home/circleci/project/rapidash && git push
 
 
