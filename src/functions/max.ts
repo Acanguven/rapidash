@@ -16,6 +16,7 @@ solution
   .example('r.max() // undefined')
   .example('r.max([]) // undefined')
   .test('Return max number', [[1, 2, 3]], 3)
+  .test('Return max number', [[3, 1, 6, 3, 7]], 7)
   .test('Return undefined for empty', [[]], undefined)
   .test('Return undefined for no params', [], undefined)
   .bench([
