@@ -17,7 +17,6 @@ solution
   .bench([3])
   .bench([60]);
 
-
 /**
  * Solutions
  * Provide your solutions below
