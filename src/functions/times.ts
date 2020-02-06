@@ -24,10 +24,11 @@ solution
     [{ test: 'object' }, { test: 'object' }]
   )
   .test('Return filled 2 twice', [2, 2], [2, 2])
+  .bench([2, 2])
+  .bench([100, { hello: 'world' }])
   .bench([
-    [2, 2],
-    [100, { hello: 'world' }],
-    [1000, { hello: 'world', nested: { object: { with: { array: [] } } } }],
+    1000,
+    { hello: 'world', nested: { object: { with: { array: [] } } } },
   ]);
 
 /**

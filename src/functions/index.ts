@@ -5,6 +5,8 @@ import { solution as average } from './average';
 import { solution as isPalindrome } from './is-palindrome';
 import { solution as primes } from './primes';
 import { solution as times } from './times';
+import { solution as equal } from './equal';
+import { solution as isString } from './is-string';
 import { solution as flatten } from './flatten';
 
 export {
@@ -15,5 +17,7 @@ export {
   isPalindrome,
   primes,
   times,
+  equal,
+  isString,
   flatten,
 };
