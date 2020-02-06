@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as webpack from 'webpack';
 import { execSync } from 'child_process';
-import { distinctByProp } from './functions/helper';
+import { distinctByProp } from './helper';
 
 const PRE_BUILD_FOLDER = path.join(__dirname, '../pre-build');
 const DIST_FOLDER = path.join(__dirname, '../dist');
