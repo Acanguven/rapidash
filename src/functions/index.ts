@@ -7,6 +7,7 @@ import { solution as primes } from './primes';
 import { solution as times } from './times';
 import { solution as equal } from './equal';
 import { solution as isString } from './is-string';
+import { solution as flatten } from './flatten';
 
 export {
   max,
@@ -18,4 +19,5 @@ export {
   times,
   equal,
   isString,
+  flatten,
 };
