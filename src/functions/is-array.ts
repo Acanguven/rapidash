@@ -10,12 +10,12 @@ export const solution = new SolutionBuilder<definition>('isArray');
 
 solution
   .description('checks the input is array')
-  .example('r.isObject({}) // true')
-  .example('r.isObject(2) // false')
-  .example('r.isObject("") // false')
-  .example('r.isObject(NaN) // false')
-  .example('r.isObject([]) // false')
-  .example('r.isObject(undefined) // false')
+  .example('r.isArray({}) // true')
+  .example('r.isArray(2) // false')
+  .example('r.isArray("") // false')
+  .example('r.isArray(NaN) // false')
+  .example('r.isArray([]) // false')
+  .example('r.isArray(undefined) // false')
   .test('Return true when is array', [[]], true)
   .test('Return false when is number', [2], false)
   .test('Return false when is string', [''], false)
