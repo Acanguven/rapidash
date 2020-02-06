@@ -25,7 +25,9 @@ solution
   // tslint:disable-next-line: no-inferrable-types
   .fn(<T>(array: T[], depth: number = 1): T[] => {
     const isFlattenable = (value: any) => {
-      return Array.isArray(value) || !!(value && value[Symbol.isConcatSpreadable]);
+      return (
+        Array.isArray(value) || !!(value && value[Symbol.isConcatSpreadable])
+      );
     };
     const base = (array: any, depth: number, result: any[]): any => {
       if (array === null || array === undefined) {
