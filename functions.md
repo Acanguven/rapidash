@@ -34,7 +34,7 @@ r.max([]) // undefined
 
 > max function by <a href="https://github.com/acanguven">acanguven</a>  
 
-max can perform approximately 61,979,495 ops/sec.
+max can perform approximately 47,251,995 ops/sec.
 
 ___
 ## factorial
@@ -50,7 +50,7 @@ r.factorial(6) // 720
 
 > factorial function by <a href="https://github.com/yavuzkoca">yavuzkoca</a>  
 
-factorial can perform approximately 45,587,712 ops/sec.
+factorial can perform approximately 39,883,067 ops/sec.
 
 ___
 ## fibonacci
@@ -70,9 +70,9 @@ r.fibonacci(20) // 6765
 
 
 
-> fibonacci function by <a href="https://github.com/yavuzkoca">yavuzkoca</a>  
+> fibonacci function by <a href="https://github.com/Emre-Kul">Emre-Kul</a>  
 
-fibonacci can perform approximately 22,588,110 ops/sec.
+fibonacci can perform approximately 20,709,644 ops/sec.
 
 ___
 ## average
@@ -100,7 +100,7 @@ r.average(1,2,3,0) // 1.5
 
 > average function by <a href="https://github.com/acanguven">acanguven</a>  
 
-average can perform approximately 27,144,938 ops/sec.
+average can perform approximately 21,715,502 ops/sec.
 
 ___
 ## isPalindrome
@@ -131,7 +131,7 @@ r.isPalindrome("aaaaabaaa") // false
 
 > isPalindrome function by <a href="https://github.com/yavuzkoca">yavuzkoca</a>  
 
-isPalindrome can perform approximately 15,962,403 ops/sec.
+isPalindrome can perform approximately 12,573,986 ops/sec.
 
 ___
 ## primes
@@ -147,7 +147,7 @@ r.primes(10) // [2,3,5,7]
 
 > primes function by <a href="https://github.com/acanguven">acanguven</a>  
 
-primes can perform approximately 31,211 ops/sec.
+primes can perform approximately 23,703 ops/sec.
 
 ___
 ## times
@@ -172,7 +172,7 @@ r.times(2, 2) // [2, 2]
 
 > times function by <a href="https://github.com/cagataycali">cagataycali</a>  
 
-times can perform approximately 10,013,241 ops/sec.
+times can perform approximately 8,203,085 ops/sec.
 
 ___
 ## equal
@@ -194,7 +194,7 @@ r.equal(NaN, NaN) // true
 
 > equal function by <a href="https://github.com/cagataycali">cagataycali</a>  
 
-equal can perform approximately 44,759,030 ops/sec.
+equal can perform approximately 43,220,448 ops/sec.
 
 ___
 ## isString
@@ -225,7 +225,7 @@ r.isString(undefined) // false
 
 > isString function by <a href="https://github.com/cagataycali">cagataycali</a>  
 
-isString can perform approximately 61,048,902 ops/sec.
+isString can perform approximately 65,448,669 ops/sec.
 
 ___
 ## flatten
@@ -244,6 +244,6 @@ r.flatten([2, 3, [4, [6]]], 2) // [2, 3, 4, 6]
 
 > flatten function by <a href="https://github.com/mehmetsefabalik">mehmetsefabalik</a>  
 
-flatten can perform approximately 6,303,274 ops/sec.
+flatten can perform approximately 6,711,145 ops/sec.
 
 
