@@ -19,9 +19,9 @@ solution
   .test('Return fibonacci for 70', [70], 190392490709135)
   .test('Return fibonacci for 90', [90], 2880067194370816000)
   .bench([14])
-  .bench([100])
-  .bench([200])
-  .bench([1000]);
+  .bench([100]);
+// .bench([200])
+// .bench([1000]);
 
 /**
  * Solutions

@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as webpack from 'webpack';
 import { execSync } from 'child_process';
+import { distinctByProp } from './functions/helper';
 
 const PRE_BUILD_FOLDER = path.join(__dirname, '../pre-build');
 const DIST_FOLDER = path.join(__dirname, '../dist');
@@ -131,10 +132,12 @@ class Builder {
         score: number;
       }
     > = new Map();
+
     benchmarkResults.forEach(result => {
-      const benchSorted = result.benchmarkResults.benchmarks.sort(
-        (a, b) => b.opsSec - a.opsSec
-      );
+      const benchSorted = distinctByProp(
+        result.benchmarkResults.benchmarks,
+        'owner'
+      ).sort((a, b) => b.opsSec - a.opsSec);
 
       benchSorted.forEach((bench, i) => {
         const existingOwner = contributorList.get(bench.owner);
@@ -213,10 +216,6 @@ class Builder {
         '{{hz}}': Math.round(
           fn.benchmarkResults.winnerSolution.hz
         ).toLocaleString(),
-        '{{benchData}}': JSON.stringify(fn.function.benchmarkInput).slice(
-          1,
-          -1
-        ),
       };
 
       let functionMarkdownContent = functionTemplate;

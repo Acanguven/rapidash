@@ -1,6 +1,6 @@
 {
   "name": "rapidash",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "./rapidash.min.js",
   "description": "Fastest functional utility library created by NodeJs community",
   "scripts": {
