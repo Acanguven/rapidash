@@ -2,7 +2,7 @@ import { SolutionBuilder } from '../solution';
 
 export type definition = (word: string) => boolean;
 
-export const solution = new SolutionBuilder<definition>('palindrome');
+export const solution = new SolutionBuilder<definition>('isPalindrome');
 
 /**
  * Solution Definition
@@ -10,12 +10,12 @@ export const solution = new SolutionBuilder<definition>('palindrome');
 
 solution
   .description('Returns true if given word is palindrome. Otherwise, false')
-  .example('r.palindrome("") // true')
-  .example('r.palindrome("a") // true')
-  .example('r.palindrome("aa") // true')
-  .example('r.palindrome("aab") // false')
-  .example('r.palindrome("aaaaa") // true')
-  .example('r.palindrome("aaaaabaaa") // false')
+  .example('r.isPalindrome("") // true')
+  .example('r.isPalindrome("a") // true')
+  .example('r.isPalindrome("aa") // true')
+  .example('r.isPalindrome("aab") // false')
+  .example('r.isPalindrome("aaaaa") // true')
+  .example('r.isPalindrome("aaaaabaaa") // false')
   .test('Return true when input is empty string', [''], true)
   .test('Return true when input is one character', ['a'], true)
   .test('Return true when input is two character', ['aa'], true)
