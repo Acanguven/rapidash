@@ -1,5 +1,7 @@
-import { Suite } from 'benchmark';
-import { Solution } from './solution';
+import {Suite} from 'benchmark';
+import {Solution} from './solution';
+
+const cliTable = require('cli-table');
 
 interface BenchmarkReport {
   winnerSolution: {
@@ -16,10 +18,10 @@ interface BenchmarkReport {
 class Benchmark {
   private solutions: Solution[];
   private suite: Suite;
-  private benchParams: unknown[];
+  private benchParams: unknown[][];
   private name: string;
 
-  constructor(solutions: Solution[], benchParams: unknown[], name: string) {
+  constructor(solutions: Solution[], benchParams: unknown[][], name: string) {
     this.solutions = solutions;
     this.suite = new Suite();
     this.benchParams = benchParams;
@@ -29,25 +31,62 @@ class Benchmark {
   async run(): Promise<BenchmarkReport> {
     let defer: (winner: BenchmarkReport) => void;
     this.solutions.forEach(solution => {
-      const solutionBoundHandler = solution.func.bind(
-        null,
-        ...this.benchParams
-      );
+      const benchFunctions = this.benchParams.map(params => ({
+        fn: solution.func.bind(
+          null,
+          ...params
+        ),
+        case: `${this.name}(${JSON.stringify(params).slice(
+          1,
+          -1
+        )})`
+      }));
 
-      this.suite.add(solution.owner, () => {
-        solutionBoundHandler();
-      });
+      benchFunctions.forEach(bench => {
+        this.suite.add(`${solution.owner} - ${bench.case}`, () => {
+          bench.fn();
+        });
+      })
     });
 
     this.suite.on('complete', () => {
       const fastest = this.suite.filter('fastest');
+
+      const table = new cliTable({
+        head: ['Solution Owner', 'Test Case', 'ops/sec']
+      });
+
+      this.suite.forEach((bench: any) => {
+        const [owner, testCase] = bench.name.split(' - ');
+        table.push([owner, testCase, Math.round(
+          bench.hz
+        ).toLocaleString()]);
+      });
+
+      const benchAverages = this.suite.map((bench: any) => {
+        const [owner] = bench.name.split(' - ');
+        const totalTests = this.suite.filter((suite: any) => suite.name.startsWith(`${owner} -`));
+        const hz = totalTests.reduce((avg: number, c: any) => avg + c.hz, 0) / totalTests.length;
+
+        return {
+          name: owner,
+          hz,
+          text: Math.round(
+            hz
+          ).toLocaleString(),
+        }
+      }).sort((a, b) => b.hz - a.hz);
+
+      console.log(table.toString());
+      console.log('🏆', `Fastest solution owner: ${benchAverages[0].name} with average ops/sec ${benchAverages[0].text}`);
+
       defer({
         winnerSolution: {
-          owner: fastest.map('name' as any)[0] as string,
-          hz: fastest.map('hz' as any)[0] as number,
+          owner: benchAverages[0].name,
+          hz: benchAverages[0].hz,
         },
-        benchmarks: this.suite.map((bench: any) => ({
-          text: bench.toString(),
+        benchmarks: benchAverages.map((bench: any) => ({
+          text: bench.text,
           opsSec: bench.hz,
           owner: bench.name,
         })),
@@ -55,15 +94,15 @@ class Benchmark {
     });
 
     this.suite.on('cycle', (event: any) => {
-      console.info('⚡', event.target.toString());
+      console.log('⚡', event.target.toString());
     });
 
     return new Promise<BenchmarkReport>(resolve => {
       defer = resolve;
-      console.info('🏎️', `Starting benchmarks for ${this.name}`);
-      this.suite.run({ async: true });
+      console.log('🏎️', ` Starting benchmarks for ${this.name}`);
+      this.suite.run({async: true});
     });
   }
 }
 
-export { Benchmark, BenchmarkReport };
+export {Benchmark, BenchmarkReport};
