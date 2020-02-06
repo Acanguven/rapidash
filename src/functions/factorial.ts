@@ -12,7 +12,10 @@ solution
   .description('Calculates the factorial of a number.')
   .example('r.factorial(6) // 720')
   .test('Return factorial', [6], 720)
-  .bench([14]);
+  .test('Return 1 for input 0', [0], 1)
+  .bench([14])
+  .bench([3])
+  .bench([60]);
 
 /**
  * Solutions
@@ -24,4 +27,23 @@ solution
   .method('Recursive')
   .fn(function factorial(n): number {
     return n <= 1 ? 1 : factorial(n - 1) * n;
+  });
+
+solution
+  .owner('BatuAksoy')
+  .method('Tail Recursive')
+  .fn(function factorial(n, accumulator = 1): number {
+    return n <= 1 ? accumulator : factorial(n - 1, n * accumulator);
+  });
+
+solution
+  .owner('yavuzkoca')
+  .method('For Loop')
+  .fn(function factorial(n): number {
+    let b = 1;
+    for (let i = 2; i <= n; i++) {
+      b *= i;
+    }
+
+    return b;
   });
