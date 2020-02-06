@@ -33,3 +33,15 @@ solution
   .fn(function factorial(n, accumulator = 1): number {
     return n <= 1 ? accumulator : factorial(n - 1, n * accumulator);
   });
+
+solution
+  .owner('yavuzkoca')
+  .method('For Loop')
+  .fn(function factorial(n): number {
+    let b = 1;
+    for (let i = 2; i <= n; i++) {
+      b *= i;
+    }
+
+    return b;
+  });
