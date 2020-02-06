@@ -20,4 +20,7 @@
     * [times](functions.md#times)
     * [equal](functions.md#equal)
     * [isString](functions.md#isString)
+    * [isObject](functions.md#isObject)
+    * [isArray](functions.md#isArray)
+    * [isNumber](functions.md#isNumber)
     * [flatten](functions.md#flatten)
