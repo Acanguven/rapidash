@@ -6,7 +6,7 @@ defaults: &defaults
     - image: circleci/node:10
 
 orbs:
-  codecov: codecov/codecov@1.0.4
+  codecov: codecov/codecov@1.0.5
 
 jobs:
   test:
@@ -27,7 +27,6 @@ jobs:
       - run: npm run compile
       - codecov/upload:
           file: coverage/*.json
-          token: $CODECOV_TOKEN
 
   bench:
     <<: *defaults
