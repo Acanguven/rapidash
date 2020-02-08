@@ -35,3 +35,8 @@ solution
   .fn(
     (input: any) => Object.prototype.toString.call(input) === '[object String]'
   );
+
+solution
+  .owner('ilker0')
+  .method('Deneme')
+  .fn((input: any) => typeof input === 'string');
