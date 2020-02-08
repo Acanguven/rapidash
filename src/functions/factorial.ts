@@ -59,3 +59,16 @@ solution
 
     return b;
   });
+
+solution
+  .owner('ilker0')
+  .method('While Loop')
+  .fn(function factorial(n): number {
+    let b = 1;
+    while (n > 0) {
+      b *= n;
+      n -= 1;
+    }
+
+    return b;
+  });

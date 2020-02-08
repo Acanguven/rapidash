@@ -91,3 +91,18 @@ solution
 
     return max;
   });
+
+solution
+  .owner('ilker0')
+  .method('Linear')
+  .fn(arr => {
+    if (!arr || !arr.length) return;
+
+    let max = arr[0];
+
+    for (let i = 0, len = arr.length; i < len; ++i) {
+      if (arr[i] > max) max = arr[i];
+    }
+
+    return max;
+  });
