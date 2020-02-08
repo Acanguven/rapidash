@@ -26,7 +26,7 @@ Rapidash releases new version each sunday picking the fastest solutions from lis
 
 
 
-<a href="https://www.npmjs.com/package/rapidash" target="_blank">Current version</a> of Rapidash is: 1.3.2 with size 3.522kb *without gzip*.
+<a href="https://www.npmjs.com/package/rapidash" target="_blank">Current version</a> of Rapidash is: 1.3.3 with size 3.522kb *without gzip*.
 
 
 
