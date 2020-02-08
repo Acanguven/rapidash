@@ -23,7 +23,12 @@ solution
   .test('Return false when is array', [[]], false)
   .test('Return false when is undefined', [undefined], false)
   .test('Return false when is date', [new Date()], false)
-  .bench([2]);
+  .bench([2])
+  .bench([''])
+  .bench([{}])
+  .bench([NaN])
+  .bench([undefined])
+  .bench([[]]);
 
 /**
  * Solutions
@@ -38,3 +43,8 @@ solution
       !isNaN(input) &&
       Object.prototype.toString.call(input) === '[object Number]'
   );
+
+solution
+  .owner('yavuzkoca')
+  .method('JS Typeof')
+  .fn((input: any) => !isNaN(input) && typeof input === 'number');
