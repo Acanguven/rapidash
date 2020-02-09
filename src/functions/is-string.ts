@@ -23,7 +23,12 @@ solution
   .test('Return false when is array', [[]], false)
   .test('Return false when is undefined', [undefined], false)
   .test('Return false when is date', [new Date()], false)
-  .bench([{}]);
+  .bench([{}])
+  .bench([])
+  .bench([2])
+  .bench([[]])
+  .bench([NaN])
+  .bench(['']);
 /**
  * Solutions
  * Provide your solutions below
@@ -35,3 +40,8 @@ solution
   .fn(
     (input: any) => Object.prototype.toString.call(input) === '[object String]'
   );
+
+solution
+  .owner('yavuzkoca')
+  .method('JS Typeof')
+  .fn((input: any) => typeof input === 'string');
