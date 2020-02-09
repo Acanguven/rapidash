@@ -24,3 +24,4 @@
     * [isArray](functions.md#isArray)
     * [isNumber](functions.md#isNumber)
     * [flatten](functions.md#flatten)
+    * [isPrime](functions.md#isPrime)
