@@ -11,6 +11,7 @@ import { solution as isObject } from './is-object';
 import { solution as isArray } from './is-array';
 import { solution as isNumber } from './is-number';
 import { solution as flatten } from './flatten';
+import { solution as isPrime } from './is-prime';
 
 export {
   max,
@@ -26,4 +27,5 @@ export {
   isArray,
   isNumber,
   flatten,
+  isPrime,
 };
