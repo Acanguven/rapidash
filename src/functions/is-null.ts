@@ -2,7 +2,7 @@ import { SolutionBuilder } from '../solution';
 
 export type definition = (input: any) => boolean;
 
-export const solution = new SolutionBuilder<definition>('isNil');
+export const solution = new SolutionBuilder<definition>('isNull');
 
 /**
  * Solution Definition
@@ -10,13 +10,13 @@ export const solution = new SolutionBuilder<definition>('isNil');
  */
 
 solution
-  .description('checks the input is number')
-  .example('r.isNil(null) // true')
-  .example('r.isNil(undefined) // true')
-  .example('r.isNil(0) // false')
-  .example('r.isNil(false) // false')
-  .example('r.isNil(true) // false')
-  .example('r.isNil("") // false')
+  .description('checks the input is null or undefined')
+  .example('r.isNull(null) // true')
+  .example('r.isNull(undefined) // true')
+  .example('r.isNull(0) // false')
+  .example('r.isNull(false) // false')
+  .example('r.isNull(true) // false')
+  .example('r.isNull("") // false')
   .test('Return true when is null', [null], true)
   .test('Return true when is undefined', [undefined], true)
   .test('Return false when is number', [0], false)
