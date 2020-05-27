@@ -84,10 +84,8 @@ solution
       }
 
       let b = 1;
-
       for (let i = value; i >= 2; i--) {
         b *= i;
-
         cache[i] = b;
       }
 
