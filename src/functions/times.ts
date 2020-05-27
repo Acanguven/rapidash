@@ -42,3 +42,16 @@ solution
   .fn((times, data) => {
     return new Array(times).fill(data);
   });
+
+solution
+  .owner('ibrahimozdogan')
+  .method('Filling array according to the `times` with the `value` by using `for` loop')
+  .fn((times, value) => {
+    const data = [];
+
+    for (let i = 0; i < times; i++) {
+      data.push(value);
+    }
+
+    return data;
+  });

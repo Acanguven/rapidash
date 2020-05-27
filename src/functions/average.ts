@@ -32,3 +32,17 @@ solution
     'Use Array.prototype.reduce() to add each value to an accumulator, initialized with a value of 0, divide by the length of the array.'
   )
   .fn((...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.length);
+
+solution
+  .owner('ibrahimozdogan')
+  .method('Uses `for loop` in order to calculate average of the given numbers')
+  .fn((...nums) => {
+    let length = nums.length;
+    let sum = nums[0];
+
+    for (let i = 1; i < nums.length; i++) {
+      sum += nums[i];
+    }
+
+    return sum / length;
+  });

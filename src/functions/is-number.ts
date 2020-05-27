@@ -48,3 +48,8 @@ solution
   .owner('yavuzkoca')
   .method('JS Typeof')
   .fn((input: any) => !isNaN(input) && typeof input === 'number');
+
+solution
+  .owner('ibrahimozdogan')
+  .method('Validate value by using short-circuit evaluation and typeof')
+  .fn((value: any) => typeof (value || '') == 'number');

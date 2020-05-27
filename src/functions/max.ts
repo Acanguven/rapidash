@@ -10,7 +10,7 @@ export const solution = new SolutionBuilder<definition>('max');
 
 solution
   .description(
-    'Computes the maximum value of array. If array is empty or falsey, undefined is returned.'
+    'Computes the maximum value of array. If array is empty or falsy, undefined is returned.'
   )
   .example('r.max([1,2,3]) // 3')
   .example('r.max() // undefined')
