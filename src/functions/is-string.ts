@@ -44,4 +44,4 @@ solution
 solution
   .owner('yavuzkoca')
   .method('JS Typeof')
-  .fn((input: any) => typeof input == 'string');
+  .fn((input: any) => typeof input === 'string');

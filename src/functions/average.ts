@@ -37,10 +37,10 @@ solution
   .owner('ibrahimozdogan')
   .method('Uses `for loop` in order to calculate average of the given numbers')
   .fn((...nums) => {
-    let length = nums.length;
+    const length = nums.length;
     let sum = nums[0];
 
-    for (let i = 1; i < nums.length; i++) {
+    for (let i = 1; i < length; i++) {
       sum += nums[i];
     }
 

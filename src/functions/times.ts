@@ -45,7 +45,9 @@ solution
 
 solution
   .owner('ibrahimozdogan')
-  .method('Filling array according to the `times` with the `value` by using `for` loop')
+  .method(
+    'Filling array according to the `times` with the `value` by using `for` loop'
+  )
   .fn((times, value) => {
     const data = [];
 

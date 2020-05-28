@@ -52,4 +52,4 @@ solution
 solution
   .owner('ibrahimozdogan')
   .method('Validate value by using short-circuit evaluation and typeof')
-  .fn((value: any) => typeof (value || '') == 'number');
+  .fn((value: any) => typeof (value || '') === 'number');
