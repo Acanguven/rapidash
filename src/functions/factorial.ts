@@ -71,3 +71,37 @@ solution
 
     return b;
   });
+
+solution
+  .owner('ilker0')
+  .method('While Loop')
+  .fn(function factorial(n): number {
+    let b = 1;
+    while (n > 0) {
+      b *= n;
+      n -= 1;
+    }
+
+    return b;
+  });
+
+solution
+  .owner('ibrahimozdogan')
+  .method('Factorial of given value by using tabulation caching technique')
+  .fn(
+    ((cache: { [key: number]: number }) => {
+      return (value: number) => {
+        if (cache[value]) {
+          return cache[value];
+        }
+
+        let b = 1;
+        for (let i = value; i >= 2; i--) {
+          b *= i;
+          cache[i] = b;
+        }
+
+        return b;
+      };
+    })({ 0: 1, 1: 1 })
+  );

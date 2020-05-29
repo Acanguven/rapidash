@@ -10,7 +10,7 @@ export const solution = new SolutionBuilder<definition>('max');
 
 solution
   .description(
-    'Computes the maximum value of array. If array is empty or falsey, undefined is returned.'
+    'Computes the maximum value of array. If array is empty or falsy, undefined is returned.'
   )
   .example('r.max([1,2,3]) // 3')
   .example('r.max() // undefined')
@@ -86,6 +86,21 @@ solution
     let max = arr[0];
 
     for (let i = 1; i < len; ++i) {
+      if (arr[i] > max) max = arr[i];
+    }
+
+    return max;
+  });
+
+solution
+  .owner('ilker0')
+  .method('Linear')
+  .fn(arr => {
+    if (!arr || !arr.length) return;
+
+    let max = arr[0];
+
+    for (let i = 0, len = arr.length; i < len; ++i) {
       if (arr[i] > max) max = arr[i];
     }
 

@@ -36,3 +36,8 @@ solution
   .fn(
     (input: any) => Object.prototype.toString.call(input) === '[object Array]'
   );
+
+solution
+  .owner('ibrahimozdogan')
+  .method('Validate the value by using `Array.isArray`')
+  .fn(Array.isArray);
