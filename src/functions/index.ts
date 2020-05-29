@@ -13,6 +13,8 @@ import { solution as isNumber } from './is-number';
 import { solution as flatten } from './flatten';
 import { solution as isPrime } from './is-prime';
 import { solution as isNull } from './is-null';
+import { solution as isUndefined } from './is-undefined';
+import { solution as isEmptyArray } from './is-empty-array';
 
 export {
   max,
@@ -30,4 +32,6 @@ export {
   flatten,
   isPrime,
   isNull,
+  isUndefined,
+  isEmptyArray,
 };
