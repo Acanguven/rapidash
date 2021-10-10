@@ -11,7 +11,7 @@
 [![pr](https://camo.githubusercontent.com/d4e0f63e9613ee474a7dfdc23c240b9795712c96/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e2e737667)](https://github.com/Acanguven/rapidash/pulls)
 [![pr](https://snyk.io/test/github/Acanguven/rapidash/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Acanguven/rapidash?targetFile=package.json)
 
-Follow the [documentation](https://rapidashjs.com) for more information about Rapidash and get a quick start!
+Follow the [documentation](https://acg.software/rapidash/) for more information about Rapidash and get a quick start!
 
 ## What is Rapidash?
 Rapidash is a JavaScript utility library designed for performance, modularity, and reliability. Unlike other utility libraries, Rapidash designed from the ground up to be fast all the time against all JavaScript engine versions. Also being open-source friendly, it is evolving faster than any other utility library.
@@ -35,7 +35,7 @@ const r = require('rapidash');
 console.log(r.max([1,2,3])); // 3
 ```
 
-Check out [functions](https://rapidashjs.com/#/functions) for all features.
+Check out [functions](https://acg.software/rapidash/#/functions) for all features.
 
 
 ## How it works?
