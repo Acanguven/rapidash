@@ -23,6 +23,18 @@ solution
  */
 
 solution
+  .owner('hasangenc')
+  .method('While loop')
+  .fn(function factorial(n): number {
+    let b = 1;
+    while (n > 1) {
+      b *= n--;
+    }
+
+    return b;
+  });
+
+solution
   .owner('acanguven')
   .method('Recursive')
   .fn(function factorial(n): number {
